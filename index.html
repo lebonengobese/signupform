@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Page</title>
+    <style>
+        .body_na {
+            text-align: center
+        }
+        input[type=text],
+        input[type=email],
+        input[type=tel],
+        select {
+            width: 15%;
+            padding: 1px 23px;
+            margin: 5px;
+        }
+        button {
+            margin: 10px;
+            padding: 2px 8px;
+            width: 6%;
+        }
+    </style>
+</head>
+<body class="body_na">
+    <div class="heading_1">
+        <h3> Welcome To The Pretoria Sunnyside Bowling Club
+            <hr style="width:50%" , size="1px" , color=black>
+        </h3>
+    </div>
+
+    <form class="frm_border" name="form_1">
+        <div class=section_1>
+            <h3>Sign-Up Form</h3>
+            <img src="img/download.jiff" height="250px" width="300px">
+        </div>
+        <div class="f_name">
+            <p>
+                <strong><label>First Name: </label></strong>
+
+                <input type="text" name="f_name" placeholder="First Name" id="f_name"
+                    onkeypress="return IsAlphaNumeric(event);" ondrop="return false;" onpaste="return false;" required>
+                <span id="error"></span>
+            </p>
+        </div>
+
+        <p>
+            <strong><label>Last Name: </label></strong>
+            <input type="text" placeholder="Last Name" id="l_name" name="l_name"
+                onkeypress="return IsAlphaNumeric(event);" ondrop="return false;" onpaste="return false;" required>
+            <span id="error"></span>
+        </p>
+
+        <div class="address_bloc">
+            <p>
+                <label><strong>Address:</strong> </label>
+                <input type="text" placeholder="Address" id="address" onkeypress="return IsAlphaNumeric(event);"
+                    ondrop="return false;" onpaste="return false;" required>
+                <span id="error"></span>
+            </p>
+        </div>
+
+        <div class="Gender">
+            <p>
+                <strong><label>Gender: </label></strong>
+                <input type="radio" id="gender" value="Male" required> Male
+                <input type="radio" id="gender" value="Female" required>Female
+            </p>
+        </div>
+        <p>
+            <strong><label>Email Id: </label></strong>
+            <input type="email" placeholder="example@email.co.za" id="email_id" required>
+        </p>
+
+        <p>
+            <strong><label for="phone">Mobile: </label></strong>
+            <input type="tel" id="mobile_num" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                onkeypress="return IsAlphaNumeric(event);" ondrop="return false;" onpaste="return false;" required>
+            <span id="error"></span>
+        </p>
+
+        <strong>Location:</strong>
+        <select name="cars" id="location_slt" required>
+            <option value="Select Location">Select Location</option>
+            <option value="Boardwalk">Boardwalk</option>
+            <option value="Brooklyn">Brooklyn</option>
+            <option value="Lynnwood">Lynnwood</option>
+            <option value="Sunnyside">Sunnyside</option>
+        </select>
+        <br>
+        <button type="submit" id="sign_up_btn">Sign-up</button>
+        <button type="reset" id="reset_btn">Reset</button>
+        </div>
+    </form>
+    <script src="Back-End.js"></script>
+</body>
+</html>
